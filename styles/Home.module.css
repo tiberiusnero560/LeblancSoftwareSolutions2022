@@ -23,7 +23,9 @@
 }
 
 
-
+.titleContainer {
+    margin: 7% 0%;
+}
 
 .titleContainer span {
     color: var(--secondary-color--accent);
@@ -38,4 +40,26 @@
     height: 100%;
     margin: auto auto;
     gap: 2%;
+    flex-direction: column;
 }
+
+@media (max-width: 600px ) {
+    .titleContainer {
+
+    }
+}
+
+@media (min-width: 1400px) {
+    .imageContainer {
+        flex-direction: row;
+        margin: 5% 0%;
+    }
+
+    .aboutWrapper {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+

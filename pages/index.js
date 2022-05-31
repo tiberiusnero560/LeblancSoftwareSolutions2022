@@ -22,8 +22,8 @@ export default function Home() {
 
                 <div className={styles.imageWrapper}>
                     <div className={styles.imageContainer}>
-                        <Image src="/PagespeedScore-01.png" alt="about us" width={400} height={400} />
-                        <Image src="/PagespeedScore-02.png" alt="about us" width={400} height={400} />
+                        <Image src="/PagespeedScore-01.png" alt="about us" width={1024} height={800} />
+                        <Image src="/PagespeedScore-02.png" alt="about us" width={1024} height={800} />
                     </div>
                 </div> 
 
