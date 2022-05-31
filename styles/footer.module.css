@@ -1,0 +1,37 @@
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    margin: auto auto;
+    padding: 0% 3%;
+    background-color: #eae0e0;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.col h3 {
+
+    border: 2px solid black;
+    padding: 2% 5%;
+}
+
+.col {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
