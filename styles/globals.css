@@ -55,10 +55,6 @@
 	--main-transition: all 0.25s ease-in-out;
 
     
-
-
-
-
 }
 
 html,
@@ -161,7 +157,7 @@ img {
 		/* Small Screen Sizes */
 @media (max-device-width: 413px) {
 	h1 {
-		font-size: var(--font-size-md);
+		font-size: var(--font-size-sm);
 	}
 
 	p {

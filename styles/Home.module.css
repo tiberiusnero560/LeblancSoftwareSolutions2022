@@ -27,6 +27,8 @@
     margin: 7% 0%;
 }
 
+
+
 .titleContainer span {
     color: var(--secondary-color--accent);
 }
@@ -44,8 +46,13 @@
 }
 
 @media (max-width: 600px ) {
-    .titleContainer {
+    .titleContainer h1 {
+        font-size: var(--font-size-sm);
+    }
 
+    .image {
+        width: 25px;
+        height: 25px;
     }
 }
 
