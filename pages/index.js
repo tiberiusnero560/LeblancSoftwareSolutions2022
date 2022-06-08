@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HeroImage from '../components/HeroImage'
 import styles from '../styles/Home.module.css'
+import heroImagePhoto from '../public/HeroImage/lss-hero-medium.jpg'
+import heroImageMobile from '../public/HeroImage/lss-hero-mobile.jpg'
 
 export default function Home() {
   return (
@@ -12,7 +14,8 @@ export default function Home() {
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
-		<HeroImage />
+		<HeroImage image={heroImagePhoto}/>
+
 
 		<section className={styles.main}>
 			<div className={styles.aboutWrapper}>
@@ -22,8 +25,16 @@ export default function Home() {
 
                 <div className={styles.imageWrapper}>
                     <div className={styles.imageContainer}>
-                        <Image src="/PagespeedScore-01.png" alt="about us" width={1024} height={800} />
-                        <Image src="/PagespeedScore-02.png" alt="about us" width={1024} height={800} />
+                        <h1>Turning this</h1>
+                        <Image 
+                            src="/pagespeed-insights-mobile-1.png" alt="about us" width={1024} height={800}
+                            className={styles.introimage} 
+                        /> <br></br>
+                        <h1>Into this </h1>
+                        <Image 
+                            src="/pagespeed-insights-mobile-2.png" alt="about us" width={1024} height={800} 
+                            className={styles.introimage}
+                        />
                     </div>
                 </div> 
 
@@ -32,14 +43,50 @@ export default function Home() {
 				</div> 
 			</div>
 
-
+            {/* Services Section  */}
 			<div className={styles.servicesWrapper}>
+				<div className={styles.servicesContainer}>
+					<h1 className={styles.serviceh1}>Services</h1>
+					<div className={styles.services}>
+                        <div className={styles.service}>
+                            <h2>Web Development & Design</h2>
+                            <Image 
+                                src="/pagespeed-insights-mobile-1.png"
+                                width={1024}
+                                height={800}
+                            />
+                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                        </div>
 
-				<div>
-					<h1>Services</h1>
+                         <div className={styles.service}>
+                            <h2>App Development & Design</h2>
+                            <Image 
+                                src="/pagespeed-insights-mobile-1.png"
+                                width={1024}
+                                height={800}
+                            />
+                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                        </div>
 
-					<div>
+                         <div className={styles.service}>
+                            <h2>UI | UX Design</h2>
+                            <Image 
+                                src="/pagespeed-insights-mobile-1.png"
+                                width={1024}
+                                height={800}
+                            />
+                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                        </div>
 
+                          <div className={styles.service}>
+                            <h2>IT Consulting</h2>
+                            <Image 
+                                src="/pagespeed-insights-mobile-1.png"
+                                width={1024}
+                                height={800}
+                            />
+                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                        </div>
 					</div>
 				</div>
 		

@@ -20,6 +20,9 @@
 
 
 		/* Font sizes */
+    --header-font-size-desktop: 35px;
+    --header-font-size-mobile: 22px;
+
 	--font-size-xl: 2rem;
 
 	--font-size-lg: 1.4rem;
