@@ -6,28 +6,29 @@
 	fill: white;
 }
 
-.logoWrapper {
-	display: flex;
-  
-}
 
 .logoContainer {
-	display: flex;
-   
+    display: flex;
+    
 }
 
 .logoContainer Image {
-	width: 100%;
+    width: 100%;
 	height: 100%;
 }
 
 /* interesting look, may change may keep */
 .navContainer {
-	display: flex;
+    display: flex;
 }
 
 
 
+
+.image {
+    width: 25px;
+    height: 25px;
+}
 
 /* Navbar styles */
 

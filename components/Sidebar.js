@@ -19,14 +19,25 @@ const Sidebar = (props) => {
 					</div>
 				</div>
 
-				<div className={styles.linkContainer}>
-					<div>
+				<div className={styles.linkWrapper}>
+					<div className={styles.linkContainer}>
 						<ul className={styles.links}>
 							{/* onclick for these need to set state variable for the sidebar to false to close the sidebar so the user can see the new page */}
-							<Link href="/about"><li>About</li></Link>
-							<Link href="/check-availability"><li>Check Availability</li></Link>
-							<Link href="/book-now"><li>Book Now</li></Link>
-							<Link href="/about"><li>Contact</li></Link>
+                            <div className={styles.linkitem}>
+                                <Link href="/about"><li>About</li></Link>
+                            </div>
+
+                            <div className={styles.linkitem}>
+                                <Link href="/services"><li>Services</li></Link>
+                            </div>
+
+                            <div className={styles.linkitem}>
+                                <Link href="/clients"><li>Clients</li></Link>
+                            </div>
+
+                            <div className={styles.linkitem}>
+                                <Link href="/contact"><li>Contact</li></Link>
+                            </div>
 						</ul>
 					</div>
 				</div>

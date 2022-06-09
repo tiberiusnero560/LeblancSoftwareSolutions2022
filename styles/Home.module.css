@@ -19,6 +19,10 @@
     color: var(--secondary-color--accent);
 }
 
+.services span {
+    color: var(--secondary-color--accent);
+}
+
 .imageContainer {
     display: flex;
     align-items: center;

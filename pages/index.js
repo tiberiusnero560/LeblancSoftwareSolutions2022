@@ -5,6 +5,13 @@ import styles from '../styles/Home.module.css'
 import heroImagePhoto from '../public/HeroImage/lss-hero-medium.jpg'
 import heroImageMobile from '../public/HeroImage/lss-hero-mobile.jpg'
 
+// services images
+import webdev from '../public/services/web-dev.jpg'
+import ux from '../public/services/ui-dev-large.jpg'
+import appdevlarge from '../public/services/app-dev-large.jpg'
+import appdevsmall from '../public/services/app-dev-small.jpg'
+import consulting from '../public/services/consulting.jpg'
+
 export default function Home() {
   return (
 	<div className={styles.container}>
@@ -51,41 +58,49 @@ export default function Home() {
                         <div className={styles.service}>
                             <h2>Web Development & Design</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={webdev} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />
-                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                            <p>
+                                We build <span>beautiful</span>, <span>custom</span>, performant websites that scale. Using Frameworks like <span>Nextjs</span>,  we are able to provide the versatility of choosing the best and fastest way to render your website, while maintaining excellent SEO results
+                            </p>
                         </div>
 
                          <div className={styles.service}>
                             <h2>App Development & Design</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={appdevlarge} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />
-                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                            <p>
+                                We specialize in React. We utilize React Native to build cross-platform mobile apps. One codebase for both iOS and Android makes it easier to maintain. Most applications won't require native code for each platform.
+                            </p>
                         </div>
 
                          <div className={styles.service}>
                             <h2>UI | UX Design</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={ux} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />
-                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                            <p>
+                                We can work with you to design and develop either a user interface, or a user experience, or both. With UX we can help you design your product based on the costumers needs, and understand the flow of how a user uses your website. 
+                            </p>
                         </div>
 
                           <div className={styles.service}>
                             <h2>IT Consulting</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={consulting} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />
-                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                            <p>
+                                Sometimes you are not sure what you need for your business. We can help consult you on what products to use, open source or closed source. Should you hire onsite IT staff or outsource? Custom website or wordpress? We can help you decide.
+                            </p>
                         </div>
 					</div>
 				</div>

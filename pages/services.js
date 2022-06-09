@@ -2,6 +2,13 @@ import React from 'react'
 import styles from '../styles/services.module.css'
 import Image from 'next/image'
 
+// services images
+import webdev from '../public/services/web-dev.jpg'
+import ux from '../public/services/ui-dev-large.jpg'
+import appdevlarge from '../public/services/app-dev-large.jpg'
+import appdevsmall from '../public/services/app-dev-small.jpg'
+import consulting from '../public/services/consulting.jpg'
+
 const services = () => {
   return (
     <div className={styles.pageWrapper}>
@@ -13,7 +20,7 @@ const services = () => {
                         <div className={styles.service}>
                             <h2>Web Development & Design</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={webdev} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />
@@ -23,7 +30,7 @@ const services = () => {
                          <div className={styles.service}>
                             <h2>App Development & Design</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={appdevlarge} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />
@@ -33,7 +40,7 @@ const services = () => {
                          <div className={styles.service}>
                             <h2>UI | UX Design</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={ux} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />
@@ -43,7 +50,7 @@ const services = () => {
                           <div className={styles.service}>
                             <h2>IT Consulting</h2>
                             <Image 
-                                src="/pagespeed-insights-mobile-1.png"
+                                src={consulting} alt="about us" width={1024} height={800}
                                 width={1024}
                                 height={800}
                             />

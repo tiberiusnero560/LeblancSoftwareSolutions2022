@@ -7,7 +7,8 @@ const about = () => {
     <div className={styles.pageWrapper}>
         <div className={styles.sectionWrapper}>
 			   <div className={styles.titleContainer}>
-					<h1>We build <span>beautiful</span>, <span>performant</span> websites that <span>scale</span>.<br></br> Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website. </h1>   
+					<h1>We build <span>beautiful</span>, <span>performant</span> websites that <span>scale</span>.
+                    <br></br> Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website. </h1>   
 				</div>
 
             

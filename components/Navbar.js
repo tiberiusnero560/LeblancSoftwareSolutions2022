@@ -13,7 +13,7 @@ const Navbar = () => {
 	// Toggle the sidebar on and off
 	const toggleSidebar = () => {
 		setsidebarIsOpen(!sidebarIsOpen);
-		console.log('is clicked')
+		console.log(sidebarIsOpen);
 		
 
 	}
