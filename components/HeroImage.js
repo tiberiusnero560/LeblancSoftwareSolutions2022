@@ -1,21 +1,24 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/heroimage.module.css'
-// import heroImage from '/public/HeroImage/lss-hero-medium.jpg'
-// import heroImageMobile from '/public/HeroImage/lss-hero-mobile.jpg'
+import heroImage from '/public/HeroImage/lss-hero-4klarge.jpg'
+import heroImageMed from '/public/HeroImage/lss-hero-medium.jpg'
+import heroImageMobile from '/public/HeroImage/lss-hero-mobile.jpg'
 
 const HeroImage = (props) => {
   return (
     <div className={styles.Wrapper}>
         <div>
             <div className={styles.imageContainer}>
-                <Image 
-                    src={props.image}
-                    className={styles.image}
+                <Image
+                    src={heroImage}
+                    alt="LSS"
+                    width={1400}
+                    height={800}
                     layout="responsive"
-                    width={props.width}
-                    height={props.height}
+                    className={styles.image}
                 />
+
 
               
             </div>
