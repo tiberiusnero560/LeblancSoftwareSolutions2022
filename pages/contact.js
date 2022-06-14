@@ -2,24 +2,20 @@ import React from 'react'
 import styles from '../styles/contact.module.css'
 
 const contact = () => {
-    const submitForm = (e) => {
-        e.preventDefault()
-        const form = e.target
-        const data = new FormData(form)
-        const xhr = new XMLHttpRequest()
-        xhr.open(form.method, form.action)
-        xhr.setRequestHeader("Accept", "application/json")
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState !== XMLHttpRequest.DONE) return
-            if (xhr.status === 200) {
-                form.reset()
-                alert('Message sent!')
-            } else {
-                alert('Error sending message')
-            }
+    const sendMail = async (data) => {
+
+        try {
+          await fetch("/api/contact", {
+            "method": "POST",
+            "headers": { "content-type": "application/json" },
+            "body": JSON.stringify(data)
+          })
+    
+        } catch (error) {
+            console.log(error);
         }
-        xhr.send(data)
-    }
+    
+      }
     
 
   return (
@@ -31,7 +27,7 @@ const contact = () => {
 
         <div className={styles.formWrapper}>
             <div className={styles.formContainer}>
-                <form onSubmit={submitForm} className={styles.form}>
+                <form onSubmit={sendMail} className={styles.form}>
                     <div className={styles.formItem}>
                         <div className={styles.formItemContent}>
                             <label className={styles.label}>Name</label>
@@ -75,12 +71,15 @@ const contact = () => {
                                 placeholder="Enter your message"
                                 name="content"
                                 required
-                                contentEditable="true"
                             >
 
                             </textarea>
 
                         </div>
+                    </div>
+
+                    <div>
+                        <button className={styles.submit} type="submit">Submit</button>
                     </div>
 
 
