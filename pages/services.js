@@ -23,7 +23,7 @@ const Services = () => {
 					<h1>Services</h1>
 					<div className={styles.services}>
                         <div className={styles.service}>
-                            <h2>Web Development & Design</h2>
+                            <h2>Web Development and Design</h2>
                             <Image 
                                 src={webdev} alt="about us" width={1024} height={800}
                                
@@ -32,7 +32,7 @@ const Services = () => {
                         </div>
 
                          <div className={styles.service}>
-                            <h2>App Development & Design</h2>
+                            <h2>App Development and Design</h2>
                             <Image 
                                 src={appdevlarge} alt="about us" width={1024} height={800}
                                 
@@ -41,9 +41,9 @@ const Services = () => {
                         </div>
 
                          <div className={styles.service}>
-                            <h2>UI | UX Design</h2>
+                            <h2>UI and UX Design</h2>
                             <Image 
-                                src={ux} alt="about us" width={1024} height={800}
+                                src={webdev} alt="about us" width={1024} height={800}
                               
                             />
                             <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
