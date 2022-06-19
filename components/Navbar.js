@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/Navbar.module.css'
-import Logo from '../public/logo/LSS-logo.jpg'
+import Logo from '../public/LSS-logo.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
 import Sidebar from './Sidebar'
@@ -13,7 +13,7 @@ const Navbar = () => {
 	// Toggle the sidebar on and off
 	const toggleSidebar = () => {
 		setsidebarIsOpen(!sidebarIsOpen);
-		console.log(sidebarIsOpen);
+		console.log('is clicked')
 		
 
 	}
@@ -50,7 +50,13 @@ const Navbar = () => {
             <div className={styles.logoContainer}>
                 <Link href="/">
                     <a>
-                        <Image className={styles.image} src={Logo} width={200} height={85} />
+                        <Image
+							src={Logo}
+							srcSet
+							width={100}
+							height={100}
+							alt='Leblanc Software Solutions'
+						/>
                     </a>
                 </Link>
 

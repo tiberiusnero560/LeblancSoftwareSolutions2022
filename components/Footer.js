@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from '../styles/footer.module.css'
-import Link from 'next/link'
-import Image from 'next/image'
-import logo from '../public/logo/LSS-logo.jpg'
+
 
 const Footer = () => {
   return (

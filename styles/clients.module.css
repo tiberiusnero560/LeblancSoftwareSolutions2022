@@ -8,13 +8,40 @@
    
  }
 
+ .title {
+     margin: 12% auto;
+ }
+
+ @media (max-width: 414px) {
+     .title {
+         margin: 35% auto;
+     }
+
+     .client {
+        width: 80%;
+        
+    }
+ }
+
+ @media (min-width: 414px) {
+     .client {
+         width: 60%;
+     }
+}
+    
+
+ @media (min-width: 1280px) {
+     .client {
+         width: 40%;
+     }
+ }
+
 .client {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 5% auto;
-    width: 50%;
     height: 100%;
     border: 2px solid var(--secondary-color--accent);
     box-shadow: var(--main-box-shadow);

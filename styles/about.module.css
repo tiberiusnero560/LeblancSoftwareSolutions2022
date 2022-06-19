@@ -2,7 +2,7 @@
 .pageWrapper {
     display: block;
     padding: 10%;
-
+    margin: 0 auto;
     text-align: left;
     margin: auto auto;
 }
