@@ -8,7 +8,7 @@ import webdev from '../public/services/web-dev.jpg'
 import appdevlarge from '../public/services/app-dev-large.jpg'
 import consulting from '../public/services/consulting.jpg'
 import mobilehero from '../public/HeroImage/lss-hero-mobile.jpg'
-import ui from '../public/services/ui-dev-large.jpg'
+// import ui from '../public/services/ui-dev-large.jpg'
 
 import pagespeed1 from '../public/pagespeed-insights-mobile-1.png'
 import pagespeed2 from '../public/pagespeed-insights-mobile-2.png'
@@ -78,7 +78,7 @@ export default function Home() {
                          <div className={styles.service}>
                             <h2>UI and UX Design</h2>
                             <Image 
-                                src={ui} alt="about us" width={1024} height={800}
+                                src={appdevlarge} alt="about us" width={1024} height={800}
                               
                             />
                             <p>We build user interfaces and user experiences. UI UX can be a complicated beast, and one that can be difficult to get right. Let us worry about the interface, and you worry about making the best product.</p>
