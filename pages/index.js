@@ -5,8 +5,7 @@ import styles from '../styles/Home.module.css'
 
 // services images
 import webdev from '../public/services/web-dev.jpg'
-import ux from '../public/services/ui-dev-large.jpg'
-import appdevlarge from '../public/services/app-dev-large.jpg'
+// import appdevlarge from '../public/services/app-dev-large.jpg'
 import consulting from '../public/services/consulting.jpg'
 import mobilehero from '../public/HeroImage/lss-hero-mobile.jpg'
 
@@ -58,7 +57,7 @@ export default function Home() {
 					<h1>Services</h1>
 					<div className={styles.services}>
                         <div className={styles.service}>
-                            <h2>Web Dev & Design</h2>
+                            <h2>Web Dev and Design</h2>
                             <Image 
                                 src={webdev} alt="about us" width={1024} height={800}
                                
@@ -67,18 +66,18 @@ export default function Home() {
                         </div>
 
                          <div className={styles.service}>
-                            <h2>App Dev & Design</h2>
+                            <h2>App Dev and Design</h2>
                             <Image 
-                                src={appdevlarge} alt="about us" width={1024} height={800}
+                                src={webdev} alt="about us" width={1024} height={800}
                                 
                             />
                             <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
                         </div>
 
                          <div className={styles.service}>
-                            <h2>UI | UX Design</h2>
+                            <h2>UI and UX Design</h2>
                             <Image 
-                                src={ux} alt="about us" width={1024} height={800}
+                                src={webdev} alt="about us" width={1024} height={800}
                               
                             />
                             <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
