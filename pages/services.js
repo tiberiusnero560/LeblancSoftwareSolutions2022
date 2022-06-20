@@ -5,9 +5,9 @@ import Head from 'next/head'
 
 // services images
 import webdev from '../public/services/web-dev.jpg'
-import ux from '../public/services/ui-dev-large.jpg'
 import appdevlarge from '../public/services/app-dev-large.jpg'
 import consulting from '../public/services/consulting.jpg'
+import ui from '../public/services/ui-dev-large.jpg'
 
 const Services = () => {
   return (
@@ -37,16 +37,16 @@ const Services = () => {
                                 src={appdevlarge} alt="about us" width={1024} height={800}
                                 
                             />
-                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                             <p>We use React Native to build blazing fast cross-platform mobile applications. One codebase for all platforms. That means easier maintaining, adding features faster, and overall just easier.</p>
                         </div>
 
                          <div className={styles.service}>
                             <h2>UI and UX Design</h2>
                             <Image 
-                                src={webdev} alt="about us" width={1024} height={800}
+                                src={ui} alt="about us" width={1024} height={800}
                               
                             />
-                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                            <p>We build user interfaces and user experiences. UI UX can be a complicated beast, and one that can be difficult to get right. Let us worry about the interface, and you worry about making the best product.</p>
                         </div>
 
                           <div className={styles.service}>
@@ -55,7 +55,7 @@ const Services = () => {
                                 src={consulting} alt="about us" width={1024} height={800}
                               
                             />
-                            <p>We build beautiful, performant websites that scale. Using Frameworks like Nextj. We are able to provide the versatility of choosing the best and fastest way to render your website.</p>
+                            <p>We offer IT Consulting for when you have an idea but do not know where to begin with the tech to implement it. We can sit down and discuss your needs and offer options for you to choose from. The first hour of consultation is free.</p>
                         </div>
 					</div>
 				</div>
