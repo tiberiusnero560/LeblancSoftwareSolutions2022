@@ -11,7 +11,7 @@ const sgMail = require('@sendgrid/mail')
     subject: ${req.body.subject},
     text: 'and easy to do anywhere, even with Node.js',
     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-  }
+  },
   sgMail
     .send(msg)
     .then(() => {
