@@ -3,7 +3,7 @@ import styles from '../styles/contact.module.css'
 import { useState } from "react";
 import Head from "next/head";
 
-const Contact = () => {
+export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -31,7 +31,7 @@ const Contact = () => {
         <Head>
           <title>Contact</title>
           <meta name="contact page" content="Contact page for Leblanc Software Solutions" />
-          <link rel="icon" href="/favicon.ico" />
+          {/* <link rel="icon" href="/favicon.ico" /> */}
         </Head>
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
@@ -59,7 +59,7 @@ const Contact = () => {
             <label htmlFor="company">Company:</label>
             <input
               id="company"
-              type="compant"
+              type="company"
               onChange={e => setCompany(e.target.value)}
             />
 
@@ -78,4 +78,3 @@ const Contact = () => {
     );
   }
 
-export default Contact;
