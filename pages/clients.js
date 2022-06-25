@@ -15,6 +15,12 @@ const Clients = () => {
             <h1 className={styles.title}>Meet Our Clients </h1>
         </div>
 
+        <div className={styles.titleContainer}>
+            <div>
+                <h2 className={styles.subtitle}>We have just recently launched. we expect our portfolio of Clients to continue to grow as we aim impress each and every client with our services.</h2>
+            </div>
+        </div>
+
         <div className={styles.clientContainer}>
             <div className={styles.client}>
                 <div className={styles.clientImageContainer}>

@@ -1,20 +1,49 @@
+
+.wrapper {
+    position: fixed;
+}
+
 .clientContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5% auto;
+    margin: 20% auto;
     height: 100%;
    
  }
 
  .title {
-     margin: 12% auto;
+    margin: 8% auto;
+    color: white;
+    text-align: center;
+    font-size: var(--font-size-md);
+
  }
+
+ .subtitle {
+    margin: 5% 10%;
+    color: white;
+    text-align: center;
+    font-size: var(--font-size-sm);
+
+ }
+
+ @media (min-width: 700px) {
+     .title {
+        font-size: var(--font-size-lg);
+     }
+    .subtitle {
+        font-size: var(--font-size-lg);
+        margin: 5% 20%;
+    }
+ }
+
+
 
  @media (max-width: 414px) {
      .title {
-         margin: 35% auto;
+         margin: 10% auto;
      }
 
      .client {
@@ -33,6 +62,24 @@
  @media (min-width: 1280px) {
      .client {
          width: 40%;
+     }
+ }
+
+ @media (min-width: 1600px) {
+
+    .title {
+        font-size: var(--font-size-xl);
+    }
+    .subtitle {
+        font-size: var(--font-size-xl);
+        margin: 5% 30%;
+    }
+     .client {
+         width: 30%;
+     }
+
+     .clientContainer {
+         margin: 10% auto;
      }
  }
 
