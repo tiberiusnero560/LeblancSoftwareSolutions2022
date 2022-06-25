@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className={styles.pageWrapper}>
 	<Head>
-		<title>Leblanc Software Solutions | About</title>
+		<title>Leblanc Software  | About</title>
 		<meta name="about page" content="About page for Leblanc Software Solutions" />
 		{/* <link rel="icon" href="/public/favicon.ico" /> */}
 	</Head>
