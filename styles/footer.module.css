@@ -28,10 +28,9 @@
 
 .col h3:hover {
     color: red;
-    padding: 5%;
     border-radius: 25px;
     box-shadow: 0px 0px 20px rgba(255, 6, 6, 0.8);
-    border: 3px solid red;    
+    border: 2px solid red;    
 
 }
 
