@@ -3,22 +3,95 @@ import Head from "next/head";
 import styles from "../styles/contact.module.css";
 
 export default function ContactUs() {
+	const [fullname, setFullname] = useState("");
+  	const [email, setEmail] = useState("");
+  	const [subject, setSubject] = useState("");
+  	const [message, setMessage] = useState("");
+	const [company, setCompany] = useState("");
+	//   Form validation
+	const [errors, setErrors] = useState({});
 
- async function handleOnSubmit(e) {
-    e.preventDefault();
+	//   Setting button text
+	const [buttonText, setButtonText] = useState("Send");
 
-    const formData = {};
+	const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+	const [showFailureMessage, setShowFailureMessage] = useState(false);
 
-    Array.from(e.currentTarget.elements).forEach(field => {
-      if ( !field.name ) return;
-      formData[field.name] = field.value;
-    });
+	const handleValidation = () => {
+		let tempErrors = {};
+		let isValid = true;
 
-    await fetch('/api/mail', {
-      method: 'POST',
-      body: JSON.stringify(formData)
-    });
-  }
+		if (fullname.length <= 0) {
+		tempErrors["fullname"] = true;
+		isValid = false;
+		}
+		if (email.length <= 0) {
+		tempErrors["email"] = true;
+		isValid = false;
+		}
+		if (subject.length <= 0) {
+		tempErrors["subject"] = true;
+		isValid = false;
+		}
+		if (message.length <= 0) {
+		tempErrors["message"] = true;
+		isValid = false;
+		}
+
+		setErrors({ ...tempErrors });
+		console.log("errors", errors);
+		return isValid;
+	};
+
+	//   const [form, setForm] = useState(false);
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		let isValidForm = handleValidation();
+
+		if (isValidForm) {
+		setButtonText("Sending");
+		const res = await fetch("/api/sendgrid", {
+			body: JSON.stringify({
+			email: email,
+			fullname: fullname,
+			subject: subject,
+			company: company,
+			message: message,
+			}),
+			headers: {
+			"Content-Type": "application/json",
+			},
+			method: "POST",
+		});
+
+		const { error } = await res.json();
+		if (error) {
+			console.log(error);
+			setShowSuccessMessage(false);
+			setShowFailureMessage(true);
+			setButtonText("Send");
+
+			// Reset form fields
+			setFullname("");
+			setEmail("");
+			setMessage("");
+			setSubject("");
+			return;
+		}
+		setShowSuccessMessage(true);
+		setShowFailureMessage(false);
+		setButtonText("Send");
+		// Reset form fields
+		setFullname("");
+		setEmail("");
+		setMessage("");
+		setSubject("");
+		}
+		console.log(fullname, email, subject, message);
+	};
+
   return (
     <div className={styles.container}>
       <Head>
@@ -71,30 +144,68 @@ export default function ContactUs() {
               border-radius: .2em;
             }
           `}</style>
-          <form onSubmit={handleOnSubmit}>
+          <form onSubmit={handleSubmit}>
             <p>
               <label htmlFor="name">Name</label>
-              <input id="name" type="text" name="name" />
+              <input 
+				id="name" 
+				type="text" 
+				name="name" 
+				value={fullname}
+				onChange={(e) => setFullname(e.target.value)}
+			  />
             </p>
 
             <p>
               <label htmlFor="email">Email</label>
-              <input id="email" type="text" name="email" />
+              <input
+				id="email"
+				type="text"
+				name="email"
+				value={email}
+				onChange={(e) => setEmail(e.target.value)}
+			  />
             </p>
 
             <p>
               <label htmlFor="email">Company</label>
-              <input id="company" type="text" name="company" />
+			  <input
+				id="company"
+				type="text"
+				name="company"
+				value={company}
+				onChange={(e) => setCompany(e.target.value)}
+			  />
             </p>
 			
             <p>
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" />
+			  <textarea
+					id="message"
+					name="message"
+					value={message}
+					onChange={(e) => setMessage(e.target.value)}
+			  	/>
             </p>
 
             <div className={styles.buttonContainer}>
-              <button>Submit</button>
+              <button>
+				{buttonText}
+			  </button>
 			</div>
+
+			  <div className="text-left">
+            {showSuccessMessage && (
+              <p className="text-green-500 font-semibold text-sm my-2">
+                Thank you! Your Message has been delivered.
+              </p>
+            )}
+            {showFailureMessage && (
+              <p className="text-red-500">
+                Oops! Something went wrong, please try again.
+              </p>
+            )}
+          </div>
          
 
           </form>
