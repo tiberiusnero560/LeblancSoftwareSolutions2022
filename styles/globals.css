@@ -149,6 +149,11 @@ img {
 }
 
 
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 /* Global Container Wrapper to easily style whole page*/
 
@@ -192,4 +197,29 @@ img {
 		font-size: var(--font-size-lg);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

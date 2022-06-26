@@ -1,80 +1,105 @@
-import React from "react";
-import styles from '../styles/contact.module.css'
-import { useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
+import styles from "../styles/contact.module.css";
 
-export default function Contact() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [company, setCompany] = useState('');
-    const [subject, setSubject] = useState('');
-  
-    const handleSubmit = e => {
-      e.preventDefault();
-      const data = {
-        name,
-        email,
-        subject,
-        company,
-        message,
-      };
-      fetch('/api/contact', {
-        method: "POST",
-        body: JSON.stringify(data),
-      })
-      console.log(data);
-    };
-  
-    return (
-      <div>
-        <Head>
-          <title>Contact</title>
-          <meta name="contact page" content="Contact page for Leblanc Software Solutions" />
-          {/* <link rel="icon" href="/favicon.ico" /> */}
-        </Head>
-        <div className={styles.formContainer}>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <label htmlFor="name">Name:</label>
-            <input
-              id="name"
-              type="text"
-              onChange={e => setName(e.target.value)}
-            />
+export default function ContactUs() {
 
-            <label htmlFor="email">Email:</label>
-            <input
-              id="email"
-              type="email"
-              onChange={e => setEmail(e.target.value)}
-            />
+ async function handleOnSubmit(e) {
+    e.preventDefault();
 
-            <label htmlFor="subject">Subject:</label>
-            <input
-              id="subject"
-              type="subject"
-              onChange={e => setSubject(e.target.value)}
-            />
+    const formData = {};
 
-            <label htmlFor="company">Company:</label>
-            <input
-              id="company"
-              type="company"
-              onChange={e => setCompany(e.target.value)}
-            />
+    Array.from(e.currentTarget.elements).forEach(field => {
+      if ( !field.name ) return;
+      formData[field.name] = field.value;
+    });
 
+    await fetch('/api/mail', {
+      method: 'POST',
+      body: JSON.stringify(formData)
+    });
+  }
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Contact Me</title>
+        <meta name="description" content="Contact me for cool stuff!" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              type="text"
-              rows="4"
-              onChange={e => setMessage(e.target.value)}
-            />
-            <button type="submit">Send</button>
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Contact Us
+        </h1>
+
+        <p className={styles.description}>
+          We offer a free consultation
+        </p>
+
+        <div className={styles.grid}>
+          <style jsx>{`
+            form {
+              font-size: 1.2em;
+			  margin: 0 auto;
+			  padding: 0 10%;
+			  width: 100%;
+			  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+			@media (max-width: 415px) {
+				form {
+					padding: 0 10%;
+					width: 80%;
+				}
+
+			})
+            label {
+              display: block;
+              margin-bottom: .2em;
+            }
+            input,
+            textarea {
+              width: 100%;
+              padding: .8em;
+            }
+            button {
+              color: white;
+              font-size: 1em;
+              background-color: blueviolet;
+              padding: .8em 1em;
+              border: none;
+              border-radius: .2em;
+            }
+          `}</style>
+          <form onSubmit={handleOnSubmit}>
+            <p>
+              <label htmlFor="name">Name</label>
+              <input id="name" type="text" name="name" />
+            </p>
+
+            <p>
+              <label htmlFor="email">Email</label>
+              <input id="email" type="text" name="email" />
+            </p>
+
+            <p>
+              <label htmlFor="email">Company</label>
+              <input id="company" type="text" name="company" />
+            </p>
+			
+            <p>
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" />
+            </p>
+
+            <div className={styles.buttonContainer}>
+              <button>Submit</button>
+			</div>
+         
+
           </form>
         </div>
-      </div>
-    );
-  }
-
+      </main>
+    </div>
+  )
+}
