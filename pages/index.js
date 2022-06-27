@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HeroImage from '../components/HeroImage'
 import styles from '../styles/Home.module.css'
+import { Script } from 'next/script'
 
 // services images
 import webdev from '../public/services/web-dev.jpg'
@@ -22,14 +23,14 @@ export default function Home() {
 			<link rel="icon" href="/public/favicon.ico" />
 
            
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCEC1Z0BMQ">
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PCEC1Z0BMQ">
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments)}
                 gtag('js', new Date());
 
                 gtag('config', 'G-PCEC1Z0BMQ');
 
-            </script>
+            </Script>
         
 		</Head>
 
