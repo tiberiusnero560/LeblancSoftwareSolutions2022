@@ -71,7 +71,7 @@ export default function ContactUs() {
 			console.log(error);
 			setShowSuccessMessage(false);
 			setShowFailureMessage(true);
-			setButtonText("Send");
+			setButtonText("Failed");
 
 			// Reset form fields
 			setFullname("");
@@ -82,7 +82,7 @@ export default function ContactUs() {
 		}
 		setShowSuccessMessage(true);
 		setShowFailureMessage(false);
-		setButtonText("Send");
+		setButtonText("Sent Successfully");
 		// Reset form fields
 		setFullname("");
 		setEmail("");
@@ -167,12 +167,24 @@ export default function ContactUs() {
 			  />
             </p>
 
+			<p>
+              <label htmlFor="email">Subject</label>
+              <input
+				id="subject"
+				type="text"
+				name="subject"
+				value={subject}
+				onChange={(e) => setSubject(e.target.value)}
+			  />
+            </p>
+
             <p>
               <label htmlFor="email">Company</label>
 			  <input
 				id="company"
 				type="text"
 				name="company"
+				optional="true"
 				value={company}
 				onChange={(e) => setCompany(e.target.value)}
 			  />
@@ -194,7 +206,7 @@ export default function ContactUs() {
 			  </button>
 			</div>
 
-			  <div className="text-left">
+			<div className="text-left">
             {showSuccessMessage && (
               <p className="text-green-500 font-semibold text-sm my-2">
                 Thank you! Your Message has been delivered.

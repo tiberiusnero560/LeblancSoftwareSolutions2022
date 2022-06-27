@@ -13,8 +13,8 @@ const HeroImage = (props) => {
                 <Image
                     src={heroImage}
                     alt="LSS"
-                    width={1400}
-                    height={800}
+                    width={1920}
+                    height={1080}
                     layout="responsive"
                     className={styles.image}
                 />
