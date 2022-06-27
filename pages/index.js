@@ -29,7 +29,7 @@ export default function Home() {
 
 		<div className={styles.mobileHero}>
 			<Image 
-				src={mobilehero} alt="about us" width={1920} height={4100} className={styles.mobileHeroImage}
+				src={mobilehero} alt="about us" width={1920} height={3600} className={styles.mobileHeroImage}
 			/>
 		</div>
 
