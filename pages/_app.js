@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
             ga.pageview(url)
             
         }
-        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        document.addEventListener( 'contactform', function( event ) {
             ga( 'send', 'event', 'Contact Form', 'submit' );
         }, false );
         router.events.on('routeChangeComplete', handleRouteChange)
