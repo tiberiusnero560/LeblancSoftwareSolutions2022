@@ -144,7 +144,7 @@ export default function ContactUs() {
               border-radius: .2em;
             }
           `}</style>
-          <form onSubmit={handleSubmit}>
+          <form id="contactform" onSubmit={handleSubmit}>
             <p>
               <label htmlFor="name">Name</label>
               <input 
