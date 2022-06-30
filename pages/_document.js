@@ -19,6 +19,10 @@ export default class MyDocument extends Document {
             gtag('config', 'G-PCEC1Z0BMQ', {
               page_path: window.location.pathname,
             });
+
+            document.addEventListener( 'contactform', function( event ) {
+            ga( 'send', 'event', 'Contact Form', 'submit' );
+        }, false );
           `,
             }}
           />

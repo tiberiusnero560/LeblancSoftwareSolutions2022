@@ -13,9 +13,7 @@ function MyApp({ Component, pageProps }) {
             ga.pageview(url)
             
         }
-        document.addEventListener( 'contactform', function( event ) {
-            ga( 'send', 'event', 'Contact Form', 'submit' );
-        }, false );
+        
         router.events.on('routeChangeComplete', handleRouteChange)
         return () => {
             router.events.off('routeChangeComplete', handleRouteChange)
