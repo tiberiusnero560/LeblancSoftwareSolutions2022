@@ -17,6 +17,10 @@ function MyApp({ Component, pageProps }) {
         }
     }, [router.events])
 
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        ga( 'send', 'event', 'Contact Form', 'submit' );
+    }, false );
+
   return (
       <Layout>
             <Component {...pageProps} />   
